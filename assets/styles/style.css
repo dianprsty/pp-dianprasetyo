@@ -1,0 +1,164 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+/* -----------Header------------- */
+header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  padding: 24px 5%;
+  z-index: 50;
+}
+
+header nav {
+  width: 100%;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  list-style-type: none;
+}
+
+header nav ul li {
+  list-style: none;
+  padding: 4px;
+}
+
+header nav ul li a:hover {
+  color: #5fd068;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 0 5%;
+}
+
+/* Hero Section */
+.home {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 500px;
+  object-fit: contain;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border: 16px solid #5fd068;
+}
+
+.hero-image img {
+  width: 100%;
+  transform: scale(2);
+  margin: 30% 0 0 20%;
+}
+
+.home-description {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  text-align: center;
+}
+
+.home-description h1 {
+  color: #5fd068;
+}
+
+footer {
+  background-color: black;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* ---------------Breakpont Responsive---------------- */
+
+@media only screen and (min-width: 800px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  .about-me {
+    font-size: 36px;
+    font-weight: 500;
+    color: darkolivegreen;
+  }
+
+  header {
+    flex-direction: row;
+  }
+  header nav {
+    flex: 1;
+  }
+
+  header nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  header nav ul li a {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+  }
+
+  .home {
+    flex-direction: row;
+  }
+  .hero-image {
+    width: 50%;
+    order: 2;
+    flex-shrink: 1;
+  }
+
+  .home-description {
+    width: 50%;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
